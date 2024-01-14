@@ -1,4 +1,5 @@
 # Stochastic Gradient Descent: The Average Problem
+Beauty in Randomness
 ## Table of Contents
 1. [Problem Introduction](#problem-introduction)
 2. [SGD High Level Intuition](#sgd-high-level-intuition)
@@ -7,7 +8,7 @@
 	2. [Stochastic](#Stochastic)
 	3. [Gradient](#Gradient)
 	4. [Gradient Descent](#Gradient-Descent)
-5. [Why Stochastic?](#Why-Stochastic?)
+5. [Why Stochastic?](#Why-Stochastic)
 6. [`Stochastic Gradient Descent` Algorithm](#Stochastic-Gradient-Descent-Algorithm)
 7. [SGD in Python](#SGD-in-python)
 	1. [Calculating Loss](#Calculating-Loss)
