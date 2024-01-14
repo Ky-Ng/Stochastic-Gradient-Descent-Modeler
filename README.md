@@ -86,6 +86,7 @@ Example:
 | 2 | 1.5 | `2` | Loss = 1.5 - 2 | 1.5 - (0.5)(0.5) = 1.75 |
 | 3 | 1.75 | `1` | Loss = 1.75 - 1 | 1.75 - (0.5)(1) = 1.25 |
 | 4 | 1.25 | `3` | Loss = 3 - 1.25 | 1.25 - (0.5)(1.75) = 2.125 |
+
 After 4 iterations, we have approximated the average to be ~2 which is the actual average.
 
 ### Impacts of the Learning Rate
@@ -99,9 +100,9 @@ After 4 iterations, we have approximated the average to be ~2 which is the actua
 - When the loss is positive, that means the`guess` increases the loss
 	- Thus, we should go in the opposite direction of what we were doing! Decrease the guess to decrease the loss
 
-<small>Note: the loss is based off of a single `input output pair` which we called our `randomly sampled datapoint`, not every single value. Thus, the change that we make based on the `(-)` sign may be in the wrong direction, but in conjunction with the `learning_rate` dampens the effect of the wrong direction datapoints. </small>
+<sup>Note: the loss is based off of a single `input output pair` which we called our `randomly sampled datapoint`, not every single value. Thus, the change that we make based on the `(-)` sign may be in the wrong direction, but in conjunction with the `learning_rate` dampens the effect of the wrong direction datapoints. </sup>
 
-<small>Then, if the data is highly spread out, we can see how the average will be "pulled" by extreme values but after enough sampling iterations each number should have approx. equal effect on the guess </small>
+<sup>Then, if the data is highly spread out, we can see how the average will be "pulled" by extreme values but after enough sampling iterations each number should have approx. equal effect on the guess </sup>
 ___
 ## SGD In Python
 ### Calculating Loss
@@ -127,7 +128,7 @@ def get_next_step(guess: float, loss: float, learning_rate: float) -> float:
 ### Displaying Data
 - Data is plotted using `matplotlib` and displays datapoints from all training iterations
 - Data is `decmiated`, a concept from Computer Vision, only including every `10th pixel` or in this case `guess` to make table plotting easier
-	- Plotting is performed using the `tabulat` library
+	- Plotting is performed using the `tabulate` library
 ```python
 def decimate_array(long_list: list, interval: int = 10) -> list:
   """Returns every `interval` index of the input list"""
