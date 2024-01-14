@@ -1,5 +1,5 @@
 # Stochastic Gradient Descent: The Average Problem
-Beauty in Randomness
+Stochastic Gradient Descent (SGD): *Beauty in Randomness*
 ## Table of Contents
 1. [Problem Introduction](#problem-introduction)
 2. [SGD High Level Intuition](#sgd-high-level-intuition)
@@ -9,7 +9,7 @@ Beauty in Randomness
 	3. [Gradient](#Gradient)
 	4. [Gradient Descent](#Gradient-Descent)
 5. [Why Stochastic?](#Why-Stochastic)
-6. [`Stochastic Gradient Descent` Algorithm](#Stochastic-Gradient-Descent-Algorithm)
+6. [`SGD` Algorithm](#sgd-algorithm)
 7. [SGD in Python](#SGD-in-python)
 	1. [Calculating Loss](#Calculating-Loss)
 	2. [Generating Next Guess](#Generating-Next-Guess)
@@ -17,7 +17,7 @@ Beauty in Randomness
 8. [Plotting `SGD` With Varying Ranges](#Plotting-SGD-With-Varying-Ranges)
 	1. [Tightly Clustered](#Tightly-clustered)
 	2. [Small Outlier](#small-outlier)
-	3. [Large Outlier](#large outlier)
+	3. [Large Outlier](#large-outlier)
 ___
 ## Problem Introduction
 Although this isn't your average problem, perhaps your `avg()` function is broken and you don't know that `avg()` = `sum of data` / `# of data points`.
