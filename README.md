@@ -1,10 +1,22 @@
 # Stochastic Gradient Descent: The Average Problem
 ## Table of Contents
-1. Problem Introduction
-2. High Level Intuition
-3. Why Stochastic?
-4. `Stochastic Gradient Descent` Algorithm
-5. Key Helper Functions
+1. [Problem Introduction](#problem-introduction)
+2. [SGD High Level Intuition](#sgd-high-level-intuition)
+3. [Defining Terms](#defining-terms)
+	1. [Loss Function](#Loss-Function)
+	2. [Stochastic](#Stochastic)
+	3. [Gradient](#Gradient)
+	4. [Gradient Descent](#Gradient-Descent)
+5. [Why Stochastic?](#Why-Stochastic?)
+6. [`Stochastic Gradient Descent` Algorithm](#Stochastic-Gradient-Descent-Algorithm)
+7. [SGD in Python](#SGD-in-python)
+	1. [Calculating Loss](#Calculating-Loss)
+	2. [Generating Next Guess](#Generating-Next-Guess)
+	3. [Displaying Data](#Displaying-Data)
+8. [Plotting `SGD` With Varying Ranges](#Plotting-SGD-With-Varying-Ranges)
+	1. [Tightly Clustered](#Tightly-clustered)
+	2. [Small Outlier](#small-outlier)
+	3. [Large Outlier](#large outlier)
 ___
 ## Problem Introduction
 Although this isn't your average problem, perhaps your `avg()` function is broken and you don't know that `avg()` = `sum of data` / `# of data points`.
@@ -90,7 +102,7 @@ After 4 iterations, we have approximated the average to be ~2 which is the actua
 
 <small>Then, if the data is highly spread out, we can see how the average will be "pulled" by extreme values but after enough sampling iterations each number should have approx. equal effect on the guess </small>
 ___
-## Key Functions in Python
+## SGD In Python
 ### Calculating Loss
 - Use the `np.random.choice(list, # of items)` to extract the stochastic datapoint
 ```python
@@ -125,11 +137,8 @@ def decimate_array(long_list: list, interval: int = 10) -> list:
   return short_list
 ```
 ___
-## `SGD` With Varying Ranges
+## Plotting `SGD` With Varying Ranges
 Modeling Stochastic Gradient Descent with datasets containing varying ranges and random initializations to solve the task of finding the average of a dataset.
-
-- Let `Range` = `max(dataset) - min(dataset)`
-- Datasets with a number far apart will have a high range, which will skew the average in the positive direction
 
 Below are samples of data with varying degrees of distributions with the datasets:
 ```
@@ -140,16 +149,16 @@ high_range = [3, 4, 5, 300]
 
 | Range Type | Dataset | # of Training Iterations Needed |
 | ---- | ---- | ---- |
-| [Low Range](#low-range) | `[3, 4, 5]` | 50 |
-| [Medium Range](#medium-range) | `[3, 4, 5, 30]` | 50 |
-| High Range | `[3, 4, 5, 300]` | 600 |
+| [Tightly Clustered](#Tightly-clustered) | `[3, 4, 5]` | 50 |
+| [Small Outlier](#small-outlier) | `[3, 4, 5, 30]` | 50 |
+| [Large Outlier](#large outlier) | `[3, 4, 5, 300]` | 600 |
 ___
-## Low Range
+### Tightly Clustered
 ![](https://github.com/Ky-Ng/Stochastic-Gradient-Descent-Modeler/blob/main/Assets/SGD_Small.png)
 ___
-## Medium Range
+### Small Outlier
 ![](https://github.com/Ky-Ng/Stochastic-Gradient-Descent-Modeler/blob/main/Assets/SGD_Medium.png)
 ___
-## Outlier Range
+### Large Outlier
 ![](https://github.com/Ky-Ng/Stochastic-Gradient-Descent-Modeler/blob/main/Assets/SGD_600.png)
 ___
