@@ -1,6 +1,9 @@
 # Stochastic Gradient Descent: The Average Problem
 *Beauty in Randomness*
-Stochastic Gradient Descent (SGD) is the main algorithm behind `Back Propogation` which enables Neural Networks to learn.
+
+Stochastic Gradient Descent (SGD):
+- The main algorithm behind `Back Propogation` which enables Neural Networks to learn
+- This codebase shows SGD in an relaxed context (finding the average of an array of numbers)
 
 ## Table of Contents
 1. [Problem Introduction](#problem-introduction)
